@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: Code-Refactor
+    env: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    buildCommand: ""
+    startCommand: ./start.sh
+    envVars:
+      - key: GEMINI_API_KEY
+        value: AIzaSyCFXrZBd0HJ_Clmguq8iHOCNkGYJBXWu6I
+    ports:
+      - port: 8501
+        protocol: http
