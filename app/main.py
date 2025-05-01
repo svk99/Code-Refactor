@@ -20,9 +20,9 @@ app.add_middleware(
 class Item(BaseModel):
     code :str
 
-@app.get("/health")
-async def health_check():
-    return {"status": "ok"}
+@app.get("/")
+def read_root():
+    return {"status": "FastAPI running"}
 
 @app.post("/refactor")
 async def refactor_code(request:Item):
