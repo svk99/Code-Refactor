@@ -20,7 +20,7 @@ app.add_middleware(
 class Item(BaseModel):
     code :str
 
-@app.get("/",methods=["GET","HEAD"])
+@app.get("/")
 def read_root():
     return {"status": "FastAPI running"}
 
